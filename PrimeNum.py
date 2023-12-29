@@ -1,0 +1,20 @@
+#Number is Prime or Not
+
+def is_Prime(num):
+    #check if number is less than 2
+    if num < 2:
+        return False
+    #check for factors from 2 to square root of the number
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    
+    #if no factors then it is prime
+    return True
+
+num = eval(input("enter a number: "))
+if is_Prime(num):
+    print(f"{num} is prime")
+else:
+    print(f"{num} is not prime")
+    
